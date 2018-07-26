@@ -34,7 +34,7 @@ We put a lot of effort to make the model pictures speak about themselves, even w
 Another application in unsupervised areas:
 
 
-<img src="https://github.com/mostafa-saad/hierarchical-relational-network/raw/master/files/img/model_retrieval_main.png" alt="Figure 4" height="400" >
+<img src="https://github.com/mostafa-saad/hierarchical-relational-network/raw/master/files/img/model_retrieval_main.png" alt="Figure 4" height="500" >
 
 **Figure 4**: Our relational autoencoder model. The relationship graph for this volleyball scene is 2 disjoint cliques, one for each team and fixed for all layers. $K$ input person feature vectors, each of length 4096, are fed to a 4-layer relational autoencoder (sizes 256-128-256-4096 ) to learn a compact representation of size 128 per person.
 
