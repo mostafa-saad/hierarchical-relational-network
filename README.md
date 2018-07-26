@@ -27,7 +27,7 @@ We put a lot of effort to make the model pictures speak about themselves, even w
 **Figure 2**: Relatinal unit for processing one person inside a relational layer.  The feature vector for a person (red) is combined with each of its neighbours'.  Resultant vectors are summed to create a new feature vector for the person (dark red).
 
 
-<img src="https://github.com/mostafa-saad/hierarchical-relational-network/raw/master/files/img/model_recognition_main.png" alt="Figure 3" height="400" >
+<img src="https://github.com/mostafa-saad/hierarchical-relational-network/raw/master/files/img/model_recognition_main.png" alt="Figure 3" height="500" >
 
 **Figure 3**: Our relational network for group activity recognition for a single video frame. Given $K$ people and their initial feature vectors, these vectors are fed to 3 stacked relational layers (of output sizes per person: 512, 256, 128). Each relational layer is associated with a graph $G^{\ell}$ (disjoint cliques in this example: layer 1 has 4 cliques, each of size 3; layer 3 is a complete graph). The shared MLP $F^{\ell}$ of each layer computes the representation of 2 neighbouring players. Pooling of the output $K$ feature vectors is used for group activity classification.
 
