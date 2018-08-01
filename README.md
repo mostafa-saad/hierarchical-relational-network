@@ -70,7 +70,7 @@ Source code is released under the **BSD 2-Clause license**
 
 ## Poster and Powerpoint
 * You can find a presentation for the paper [here](https://docs.google.com/presentation/d/1PbjiquGAzQoUeTnC-rp-GeNLWp51iS9CBMBRBRR4wSM/edit?usp=sharing).
-* You can find our ECCV 2018 poster [here](TODO).
+* You can find our ECCV 2018 poster [here](https://github.com/mostafa-saad/hierarchical-relational-network/blob/master/files/ibrahim18-eccv-poster.pdf).
 
 
 
