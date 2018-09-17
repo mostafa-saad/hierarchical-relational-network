@@ -1,4 +1,4 @@
-## [Hierarchical relational network for group activity recognition and retrieval. Mostafa S. Ibrahim, Greg Mori.  European Conference on Computer Vision 2018](https://github.com/mostafa-saad/hierarchical-relational-network/blob/master/files/Ibrahim18-eccv-Hierarchical%20-Relational-Networks.pdf)
+## [Hierarchical relational network for group activity recognition and retrieval. Mostafa S. Ibrahim, Greg Mori.  European Conference on Computer Vision 2018](https://eccv2018.org/openaccess/content_ECCV_2018/papers/Mostafa_Ibrahim_Hierarchical_Relational_Networks_ECCV_2018_paper.pdf)
 
 ## Contents
 0. [Abstract](abstract)
