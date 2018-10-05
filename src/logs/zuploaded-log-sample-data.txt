@@ -1,0 +1,29 @@
+NOTICE: is_sample_test = TRUE, using fewer iterations. For real test, switch to false
+
+
+
+
+
+Method Called: network_build_layers_v1 
+Info: Relational layer Sizes: 256 128 - Dense 256 - RCRG-2R-11C 
+Reading from pickle file data/test.pkl 
+Total reading time took 0s for data/test.pkl 
+Reading from pickle file data/trainval.pkl 
+Total reading time took 0s for data/trainval.pkl 
+Method Called: utility_train 
+Start training with epoch 6 initial rate  0.000100000 and decay factor 6 and decay times 1 
+Inputs is 1 batches, each = (4, 4096, 12) 
+Epoch   1 of 6 dropout training loss:  4.1738710 training loss:  0.0000000 training accuracy:  25.0 % learning rate: 0.000100000 took 0s 
+	Test loss:  1.6445580	Test accuracy: 0/1 =   0.0 % 
+Epoch   3 of 6 dropout training loss:  3.4351714 training loss:  0.0000000 training accuracy:  25.0 % learning rate: 0.000100000 took 0s 
+	Test loss:  2.0626044	Test accuracy: 0/1 =   0.0 % 
+Epoch   5 of 6 dropout training loss:  2.1634159 training loss:  0.0000000 training accuracy:  75.0 % learning rate: 0.000100000 took 0s 
+	Test loss:  2.3250208	Test accuracy: 0/1 =   0.0 % 
+Epoch   6 of 6 dropout training loss:  2.8347905 training loss:  0.0000000 training accuracy: 100.0 % learning rate: 0.000100000 took 0s 
+Method Called: utility_test 
+Test is 1 batches, Input shape = (1, 4096, 12), Output shape = (1,) 
+	Test loss:  2.3782933	Test accuracy: 0/1 =   0.0 % 
+Total testing time: 0s
+ 
+Total training time is 0s
+ 

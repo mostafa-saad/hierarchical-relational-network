@@ -1,0 +1,39 @@
+For single image model RCRG-2R-11C, my real log looks like following:
+=====
+
+Info: Relational layer Sizes: 256 128 - Dense 256 - MAIN/BASELINE: RCRG-2R-11C 
+
+Reading from pickle file data/vgg19-tuned/test.pkl 
+Reading from pickle file data/vgg19-tuned/trainval.pkl 
+
+Method Called: utility_train 
+
+Start training with epoch 200 initial rate  0.000100000 and decay factor 100 
+Training Inputs is 14 batches, each = (250, 4096, 12) 
+
+Epoch  50 of 200 dropout training loss:  0.1809514 training loss:  0.0716116 training accuracy:  97.8 % learning rate: 0.000100000 took 6s 
+Epoch 100 of 200 dropout training loss:  0.0356007 training loss:  0.0026214 training accuracy: 100.0 % learning rate: 0.000100000 took 6s 
+Epoch 150 of 200 dropout training loss:  0.0182496 training loss:  0.0007118 training accuracy: 100.0 % learning rate: 0.000010000 took 6s 
+Epoch 200 of 200 dropout training loss:  0.0046944 training loss:  0.0000292 training accuracy: 100.0 % learning rate: 0.000010000 took 6s 
+
+
+=====
+
+Method Called: utility_test 
+
+Test is 1337 batches, Input shape = (1, 4096, 12), Output shape = (1,) 
+	Test loss:  0.8859849	Test accuracy: 1181/1337 =  88.3 %
+
+Confusion Matrix
+199  	5  	4  	11  	0  	3  	2  	2  	-1  	199  	226  	88.1			=> 199 / 226 = 88.1%
+0  	157  	7  	0  	6  	2  	0  	1  		-1  	157  	173  	90.8
+3  	2  	189  	0  	12  	0  	3  	1  	-1  	189  	210  	90  
+12  	2  	4  	143  	1  	5  	0  	1  	-1  	143  	168  	85.1
+2  	9  	24  	2  	155  	0  	0  	0  	-1  	155  	192  	80.7
+2  	4  	2  	10  	0  	161  	0  	0  	-1  	161  	179  	89.9
+0  	0  	0  	1  	0  	1  	94  	6  		-1  	94  	102  	92.2
+0  	0  	1  	0  	0  	0  	3  	83  		-1  	83  	87  	95.4 
+Total testing time: 6s
+ 
+
+Total training time is 11.5m
