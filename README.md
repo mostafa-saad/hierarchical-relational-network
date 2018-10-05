@@ -52,8 +52,30 @@ We used a single relational layer with a simple graph: each 3 consecutive person
 
 
 
+## Code Scope & Requirements
+* The provided code is a simplified version of our code. With simple effort, you can extend to whatever in the paper.
+* The provided code doesn't contain the retreival part.
+* The provided example is for a single frame processing (though the Data Mgr can read temporal data, see Data below)
+* The provided code is limited to clique stlye graphs, not general graphs. E.g. You can use it for fully connected case or e.g. groups of cliquest (e.g. in volleyball team 1 is clique and team 2 is another clique, or each 3 nearby players are a clique
+* The provided code doesn't build the data, it just shows how to process the data using the relational network. Build initial representations for people is easy. 
+  * You may use stage 1 in our C++ code for [CVPR 16](https://github.com/mostafa-saad/deep-activity-rec) to get such data (it build classifier, extrat representations in the format below). You need to convert LevelDb to PKL format
+ 
+## Data
+* In src/data, a simple ready files for train and test in pkl format
+* Provided code loads the whole data during the run time. This might be problematic for some machines due to RAM issue. You may replace this part with another strategy.
+* To understand how to structure data for a temporal clip, let's assume we have 12 persons, each clip is 10 frames. Ith Person in frame t is represented using 4096 features from VGG19
+* Each entry in the pkl will be a single person representation (4096 features)
+* The whole clip will be 12 * 10 = 120 rows
+* The first 10 rows will be for the first person (his 10 representations corresponding to the 10 frames)
+* The second 10 rows will be for the second person, and so on.
+* If there are less people than 12 or a person is not available for all 10 frames, use zeros
+* The next 120 rows will be for the second video clip.
+* Be careful to not stack the data as 10 (steps) * 12 (persons), but as I clarified.
+* The program reads the 120 lines, rearrange them as 10*(12*4096), that is 10 rows, each row has the whole scene people concatenated
+
 ## Installation
-TODO
+* Lasagne 0.1, Theano 0.8.2, Python 2.7.11, CUDA 8.0
+* Run the main of relational_network.py for an example that load attached basic Data.
 
 ## License and Citation
 
@@ -72,5 +94,8 @@ Source code is released under the **BSD 2-Clause license**
 * You can find a presentation for the paper [here](https://docs.google.com/presentation/d/1PbjiquGAzQoUeTnC-rp-GeNLWp51iS9CBMBRBRR4wSM/edit?usp=sharing).
 * You can find our ECCV 2018 poster [here](https://github.com/mostafa-saad/hierarchical-relational-network/blob/master/files/ibrahim18-eccv-poster.pdf).
 
+<img src="https://github.com/mostafa-saad/hierarchical-relational-network/blob/master/files/poster.jpg" alt="Poster" height="400" >
+
+Mostafa while presenting the poster.
 
 

@@ -173,7 +173,8 @@ if __name__ == '__main__':
     lasagne.random.set_rng(np.random.RandomState(10170))
     
     semantic_ae = RelationalNetwork()   
-    semantic_ae.network_build_layers_v1()    
+    semantic_ae.network_build_layers_v1()
+    #semantic_ae.network_build_layers_v2()	# for a more complicated version like in paper
     semantic_ae.network_train()
     
     global_settings.finalize()
