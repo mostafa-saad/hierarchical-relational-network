@@ -1,13 +1,15 @@
 ## [Hierarchical relational network for group activity recognition and retrieval. Mostafa S. Ibrahim, Greg Mori.  European Conference on Computer Vision 2018](https://eccv2018.org/openaccess/content_ECCV_2018/papers/Mostafa_Ibrahim_Hierarchical_Relational_Networks_ECCV_2018_paper.pdf)
 
 ## Contents
-0. [Abstract](abstract)
+0. [Abstract](#abstract)
 0. [Model](#model)
-0. [Experiments](#experiments)
-0. [Experiments - CAD](#experiments-cad)
+0. [Extra Experiments - CAD](#experiments-cad)
+0. [Code Scope & Requirements](#codescope)
+0. [Data Format](#data)
 0. [Installation](#installation)
 0. [License and Citation](#license-and-citation)
 0. [Poster and Powerpoint](#poster-and-powerpoint)
+
 
 
 
@@ -55,7 +57,7 @@ We used a single relational layer with a simple graph: each 3 consecutive person
 * The provided code doesn't build the data, it just shows how to process the data using the relational network. Build initial representations for people is easy.
 * You may use stage 1 in our C++ code for [CVPR 16](https://github.com/mostafa-saad/deep-activity-rec) to get such data (it build classifier, extra representations in the format below). You need to convert LevelDb to PKL format
 
-## Data
+## Data Format
 * In src/data, a simple ready file for train and test in pkl format
 * Provided code loads the whole data during the runtime. This might be problematic for some machines due to RAM issue. You may replace this part with another strategy.
 * To understand how to structure data for a temporal clip, let's assume we have 12 persons, each clip is 10 frames. Ith Person in frame t is represented using 4096 features from VGG19
