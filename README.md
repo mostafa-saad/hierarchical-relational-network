@@ -3,10 +3,10 @@
 ## Contents
 0. [Abstract](#abstract)
 0. [Model](#model)
-0. [Extra Experiments - CAD](#experiments-cad)
-0. [Graph Convolutional network](#gnn)
-0. [Code Scope & Requirements](#codescope)
-0. [Data Format](#data)
+0. [Extra Experiments - CAD](#extra-experiments-cad)
+0. [Graph Convolutional Network](#graph-convolutionaln-etwork)
+0. [Code Scope and Requirements](#code-scope-and-requirements)
+0. [Data Format](#data-format)
 0. [Installation](#installation)
 0. [License and Citation](#license-and-citation)
 0. [Poster and Powerpoint](#poster-and-powerpoint)
@@ -49,12 +49,12 @@ The Collective Activity Dataset (CAD) consists of 44 videos and five labels used
 We used a single relational layer with a simple graph: each 3 consecutive persons (spatially in horizontal dimension) are grouped as a clique. The layer maps a person of size 4096 to 128 and final person representations are concatenated. Our 9 time-steps model's performance is 84.2% vs. 81.5% from [25]. We did not compare with [3] as it uses much stronger features (VGG16) and extra annotations (pairwise interaction).  Note that CAD has very simple "relations", in that the scene label is the label of the majority (often entirety) of the people in a scene.  However, this result demonstrates that our relational layer is able to capture inter-person information to improve classification results. 
 
 
-
-## Code Scope & Requirements
+## Graph Convolutional Network
 * I have started reading in something called [Graph Convolutional Network](https://tkipf.github.io/graph-convolutional-networks/)(GNN).
 * Our paper is actually a variant of GNN. Our model input is a relational graph and initial CNN representations for the nodes to be updated based on the graph structure.
 * Our model scales linearly with the # of edges in a graph. We don't use matrices to update the representations, but a shared MLP that learns an edge representation
 * We administrate the importance of hierarchical graph representations by defining manually multiple graphs that express a hierarchy (applying this in Volleyball was easy using Graph Clique style)
+
 
 ## Code Scope & Requirements
 * The provided code is a simplified version of our code. With simple effort, you can extend to whatever in the paper.
