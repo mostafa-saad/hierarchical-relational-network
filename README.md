@@ -4,7 +4,7 @@
 0. [Abstract](#abstract)
 0. [Model](#model)
 0. [Extra Experiments - CAD](#extra-experiments-cad)
-0. [Graph Convolutional Network](#graph-convolutionaln-etwork)
+0. [Graph Convolutional Network](#graph-convolutional-etwork)
 0. [Code Scope and Requirements](#code-scope-and-requirements)
 0. [Data Format](#data-format)
 0. [Installation](#installation)
@@ -56,7 +56,7 @@ We used a single relational layer with a simple graph: each 3 consecutive person
 * We administrate the importance of hierarchical graph representations by defining manually multiple graphs that express a hierarchy (applying this in Volleyball was easy using Graph Clique style)
 
 
-## Code Scope & Requirements
+## Code Scope and Requirements
 * The provided code is a simplified version of our code. With simple effort, you can extend to whatever in the paper.
 * The provided code doesn't contain the retrieval part.
 * The provided example is for a single frame processing (though the Data Mgr can read temporal data, see Data below)
