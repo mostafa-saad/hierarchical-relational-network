@@ -4,7 +4,7 @@
 0. [Abstract](#abstract)
 0. [Model](#model)
 0. [Extra Experiments - CAD](#extra-experiments-cad)
-0. [Graph Convolutional Network](#graph-convolutional-etwork)
+0. [Graph Convolutional Network](#graph-convolutional-network)
 0. [Code Scope and Requirements](#code-scope-and-requirements)
 0. [Data Format](#data-format)
 0. [Installation](#installation)
